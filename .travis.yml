@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- 12
+deploy:
+  provider: npm
+  email: romu@soundstep.com
+  api_key:
+    secure: wATIW/KeFm6v66PwK0r/mBt3hal99v+yE1zJL+71+fIE0xbdknmx8An8kFJIszSTPWmWhQoGFq9IGOfTgCW3/TxQhyzJYvD9ebdTxESsxKkMMMQCSMTc8trkQYxQ8o5aYNsG50GfKmCKuuYUyzdDlQisSz8rJNCeVcqy/u5gN4lOVD0r8oyTwF27+jbTKWDkXXNeLXm/p2tw3jbb0G0TG/X5siYrkmVHDBYb8vrOzuNkTLGwm8CCaWrCLJaZ8DNyTt/yzwrVV25FqHKxrDN5RKY6hQwFmNMgu9a5QsQNgmGBjSTMaHph6Now/gGHNevrS148d10V3Id5wqbEpCFB3ESCtjAmnXp4MY0Xh/rC1E6M+fs4V2AahZ6TlnV5HOzQ2he5dHnEVWtvoxUlaikqNSCppyC29wpCT2+QmBcVm72SFu9cw3f3nUN9ml50CTvUTXYJilTxi+1ec+hrvzfweAe/FMCXUGyKlGQ8mXaMb/iuJ0X1P72pwIdtI0acGPLu0P7TYkiWCDSRWnaTivK95HWIlXc3n9+SW09U+lBlfnEJMFtyqVOgFP76gAm2j2Kp3lyKfvkUya0a3+tseOVVi3UUz7LKRL5A/5mzTciu76ZNjxJSsrXkdVXdwVjNZXavdvOchjnC0e9PCUFp9wQVP3rj93TmlmYqNzBhHCZmiC0=
+  on:
+    tags: true
+    repo: soundstep/infusejs
