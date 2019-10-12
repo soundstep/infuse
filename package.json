@@ -1,6 +1,6 @@
 {
     "name": "infusejs",
-    "version": "2.1.3",
+    "version": "2.1.4",
     "author": "Romuald Quantin <romu@soundstep.com> (http://www.soundstep.com)",
     "license": "MIT",
     "description": "Javascript IOC library for dependency injection",
