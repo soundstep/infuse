@@ -36,7 +36,7 @@ utils.inherit = (target, obj) => {
 };
 
 
-describe('infusejs', function () {
+describe('infuse', function () {
 
 	let injector;
 

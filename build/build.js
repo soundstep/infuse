@@ -5,7 +5,7 @@ const Terser = require("terser");
 const packageJson = require('../package.json');
 
 const date = new Date().toLocaleString('en-GB', { timeZone: 'UTC' }).split(',')[0];
-const banner = `/* infusejs - v${packageJson.version} - ${date} - https://github.com/soundstep/infusejs */`;
+const banner = `/* infuse - v${packageJson.version} - ${date} - https://github.com/soundstep/infuse */`;
 
 const input = fs.readFileSync('lib/infuse.js', 'utf8');
 const result = Terser.minify(input, {

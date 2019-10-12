@@ -1,5 +1,5 @@
 {
-    "name": "infusejs",
+    "name": "@soundstep/infuse",
     "version": "2.1.5",
     "author": "Romuald Quantin <romu@soundstep.com> (http://www.soundstep.com)",
     "license": "MIT",
@@ -19,10 +19,10 @@
         "dependency",
         "injection"
     ],
-    "homepage": "https://github.com/soundstep/infusejs",
+    "homepage": "https://github.com/soundstep/infuse",
     "repository": {
         "type": "git",
-        "url": "http://github.com/soundstep/infusejs.git"
+        "url": "http://github.com/soundstep/infuse.git"
     },
     "devDependencies": {
         "chai": "4.2.0",
