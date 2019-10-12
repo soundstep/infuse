@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-- 12
+  - 12
+branches:
+  only:
+    - master
 deploy:
   provider: npm
   email: romu@soundstep.com
