@@ -1349,28 +1349,6 @@ describe('infusejs', function () {
 			assert.equal(foo6.nameInjected, 'John');
 		});
 
-		it('should ignore other constructor names in a class', function() {
-			injector.mapValue('name', 'John');
-			class FooClass {
-				static foo(bar) {
-					const constructor = function(no1, no2) {};
-					function constructor(no1, no2){}
-					function constructor (no1, no2){}
-					constructor(no1, no2);
-					constructor (no1, no2);
-				}
-				func() {
-					this.constructor = function(){}
-				}
-				constructor(dummyVariable){
-					this.nameInjected = dummyVariable;
-				}
-			}
-			FooClass.inject = ['name'];
-			const foo = injector.createInstance(FooClass);
-			assert.equal(foo.nameInjected, 'John');
-		});
-
 		it('should be able to inject an ES6 class as a dependency without constructor', function() {
 			class FooClass {
 
