@@ -3,7 +3,8 @@ node_js:
   - 12
 branches:
   only:
-    - master
+  - master
+  - /^v.*$/
 deploy:
   provider: npm
   email: romu@soundstep.com
