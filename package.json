@@ -7,8 +7,14 @@
     "main": "./lib/infuse.js",
     "types": "./lib/main.d.ts",
     "scripts": {
+        "build": "./build/build.js",
         "test": "mocha 'tests/**/*.js'",
         "test:watch": "mocha --watch 'tests/**/*.js'"
+    },
+    "husky": {
+        "hooks": {
+          "pre-push": "npm run build"
+        }
     },
     "keywords": [
         "infuse.js",
@@ -24,7 +30,9 @@
         "url": "http://github.com/soundstep/infusejs.git"
     },
     "devDependencies": {
-        "chai": "^4.2.0",
-        "mocha": "^6.2.1"
+        "chai": "4.2.0",
+        "husky": "3.0.8",
+        "mocha": "6.2.1",
+        "terser": "4.3.8"
     }
 }
