@@ -1,9 +1,15 @@
 {
-    "name": "infuse.js",
+    "name": "infusejs",
     "version": "2.1.1",
     "author": "Romuald Quantin <romu@soundstep.com> (http://www.soundstep.com)",
     "license": "MIT",
     "description": "Javascript IOC library for dependency injection",
+    "main": "./lib/infuse.js",
+    "types": "./lib/main.d.ts",
+    "scripts": {
+        "test": "mocha 'tests/**/*.js'",
+        "test:watch": "mocha --watch 'tests/**/*.js'"
+    },
     "keywords": [
         "infuse.js",
         "infusejs",
@@ -12,19 +18,13 @@
         "dependency",
         "injection"
     ],
-    "homepage": "https://github.com/soundstep/infuse.js",
+    "homepage": "https://github.com/soundstep/infusejs",
     "repository": {
         "type": "git",
-        "url": "http://github.com/soundstep/infuse.js.git"
+        "url": "http://github.com/soundstep/infusejs.git"
     },
-    "main": "src/infuse.js",
     "devDependencies": {
-        "grunt": ">=0.4.x",
-        "grunt-contrib-watch": "*",
-        "grunt-contrib-concat": "*",
-        "grunt-contrib-uglify": "*"
-    },
-    "scripts": {
-        "test": "jasmine-node tests/"
+        "chai": "^4.2.0",
+        "mocha": "^6.2.1"
     }
 }
