@@ -1,6 +1,6 @@
 {
     "name": "@soundstep/infuse",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "author": "Romuald Quantin <romu@soundstep.com> (http://www.soundstep.com)",
     "license": "MIT",
     "description": "Javascript IOC library for dependency injection",
