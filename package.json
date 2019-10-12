@@ -20,6 +20,9 @@
         "injection"
     ],
     "homepage": "https://github.com/soundstep/infuse",
+    "publishConfig": {
+        "access": "public"
+    },
     "repository": {
         "type": "git",
         "url": "http://github.com/soundstep/infuse.git"
