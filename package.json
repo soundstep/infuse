@@ -4,8 +4,8 @@
     "author": "Romuald Quantin <romu@soundstep.com> (http://www.soundstep.com)",
     "license": "MIT",
     "description": "Javascript IOC library for dependency injection",
-    "main": "./lib/infuse.js",
-    "types": "./lib/main.d.ts",
+    "main": "lib/infuse.js",
+    "types": "types/infuse.d.ts",
     "scripts": {
         "build": "./build/build.js",
         "test": "mocha 'tests/**/*.js'",
