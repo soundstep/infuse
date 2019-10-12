@@ -1281,6 +1281,76 @@ describe('infusejs', function () {
 
 		it('should ignore other constructor names in a class', function() {
 			injector.mapValue('name', 'John');
+			class FooClass1 {
+				static foo(bar) {
+					const constructor = function(no1, no2) {};
+				}
+				constructor(dummyVariable){
+					this.nameInjected = dummyVariable;
+				}
+			}
+			class FooClass2 {
+				static foo(bar) {
+					function constructor(no1, no2){}
+				}
+				constructor(dummyVariable){
+					this.nameInjected = dummyVariable;
+				}
+			}
+			class FooClass3 {
+				static foo(bar) {
+					function constructor (no1, no2){}
+				}
+				constructor(dummyVariable){
+					this.nameInjected = dummyVariable;
+				}
+			}
+			class FooClass4 {
+				static foo(bar) {
+					constructor(no1, no2);
+				}
+				constructor(dummyVariable){
+					this.nameInjected = dummyVariable;
+				}
+			}
+			class FooClass5 {
+				static foo(bar) {
+					constructor (no1, no2);
+				}
+				constructor(dummyVariable){
+					this.nameInjected = dummyVariable;
+				}
+			}
+			class FooClass6 {
+				constructor(dummyVariable){
+					this.nameInjected = dummyVariable;
+				}
+				func() {
+					this.constructor = function(){}
+				}
+			}
+			FooClass1.inject = ['name'];
+			FooClass2.inject = ['name'];
+			FooClass3.inject = ['name'];
+			FooClass4.inject = ['name'];
+			FooClass5.inject = ['name'];
+			FooClass6.inject = ['name'];
+			const foo1 = injector.createInstance(FooClass1);
+			const foo2 = injector.createInstance(FooClass2);
+			const foo3 = injector.createInstance(FooClass3);
+			const foo4 = injector.createInstance(FooClass4);
+			const foo5 = injector.createInstance(FooClass5);
+			const foo6 = injector.createInstance(FooClass6);
+			assert.equal(foo1.nameInjected, 'John');
+			assert.equal(foo2.nameInjected, 'John');
+			assert.equal(foo3.nameInjected, 'John');
+			assert.equal(foo4.nameInjected, 'John');
+			assert.equal(foo5.nameInjected, 'John');
+			assert.equal(foo6.nameInjected, 'John');
+		});
+
+		it('should ignore other constructor names in a class', function() {
+			injector.mapValue('name', 'John');
 			class FooClass {
 				static foo(bar) {
 					const constructor = function(no1, no2) {};
